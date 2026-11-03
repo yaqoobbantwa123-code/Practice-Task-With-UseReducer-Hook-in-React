@@ -1,0 +1,165 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #080d19;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background:
+    radial-gradient(circle at top left, #172554, transparent 40%),
+    radial-gradient(circle at bottom right, #312e81, transparent 40%),
+    #080d19;
+}
+
+.counter-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 40px 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  animation: appear 0.7s ease;
+}
+
+.tag {
+  display: inline-block;
+  color: #818cf8;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #9ca3af;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.counter-display {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #9333ea);
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
+  border: 5px solid rgba(255, 255, 255, 0.12);
+}
+
+.counter-display span {
+  color: white;
+  font-size: 65px;
+  font-weight: 800;
+}
+
+.button-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.btn {
+  padding: 14px 10px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.15);
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.increment {
+  background: #059669;
+}
+
+.decrement {
+  background: #dc2626;
+}
+
+.increment-five {
+  background: #2563eb;
+}
+
+.decrement-five {
+  background: #9333ea;
+}
+
+.reset {
+  grid-column: span 2;
+  background: #374151;
+}
+
+.footer-text {
+  color: #6b7280;
+  font-size: 12px;
+  margin-top: 28px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 400px) {
+  .counter-card {
+    padding: 30px 18px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .counter-display {
+    width: 145px;
+    height: 145px;
+  }
+
+  .counter-display span {
+    font-size: 55px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 13px 6px;
+  }
+}
